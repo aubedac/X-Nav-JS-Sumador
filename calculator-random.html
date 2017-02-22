@@ -1,0 +1,19 @@
+<html>
+<title> Ejercicio 5.5.6 </title>
+<head> Calculator Random </head>
+<body>
+  <script>
+    function add() {
+      var op = document.getElementById('op');
+      var res = document.getElementById('res');
+      op.innerHTML = Math.floor(Math.random()*100).toString() + "+" + Math.floor(Math.random()*100).toString();
+      var nums = op.innerHTML.split('+');
+      var result = parseInt(nums[0]) + parseInt(nums[1]);
+      res.innerHTML = "= " + result;
+    };
+  </script>
+  <p> Adder... <span id='op'>5+3</span> <span id='res'></span></p>
+  </span> <a href="javascript:add()"> Add! </a>
+  <script> add(); </script>
+</body>
+</html>
